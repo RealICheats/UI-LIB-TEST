@@ -13,7 +13,7 @@ function Lib:CreateWindow(Title:string, Bind:Enum.KeyCode)
 	}
 	
 	-- StarterGui.ZXZAXCZ
-	UI["1"] = Instance.new("ScreenGui", if rs:IsStudio() then game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui") else game:GetService("Players").LocalPlayer:WaitForChild("cg"))
+	UI["1"] = Instance.new("ScreenGui", if not rs:IsStudio() then game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui") else game:GetService("Players").LocalPlayer:WaitForChild("cg"))
 	UI["1"]["IgnoreGuiInset"] = true;
 	UI["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
 	UI["1"]["Name"] = [[ZXZAXCZ]];
